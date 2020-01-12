@@ -1,0 +1,11 @@
+{
+"situation":"Welcome to the tutorial!\nHere you will learn the controls to the game.\nSwipe your finger to the right of the\nscreen to move right.",
+"imgSrc":"images/BG0006.png",
+"options":[{"text":"This Is A Dummy Text Box","link":"nodes/ex.txt","width":"150", "height":"75", "x":"2000", "y":"2000"},
+{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/tutorialLeft.txt","width":"250", "height":"75", "x":"800", "y":"150"}],
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"20", "y":"100"},
+"blockPositions":[{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"500","y":"200"}, {"x":"550","y":"200"}, {"x":"600","y":"200"}, {"x":"650","y":"200"}],
+"blockMovements":[{"bNum":"3", "speed":"5"},{"bNum":"4", "speed":"-5"}]
+}

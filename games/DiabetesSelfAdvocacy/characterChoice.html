@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="initial-scale = 1.0, user-scalable=no" />
+        <title>Diabetes Self Advocacy</title>
+        <script type="text/javascript"
+                src = "../simpleGame.js"></script>
+
+        <script type="text/javascript">
+
+        function BoySprite() {
+            tBoySprite = new Sprite(scene,"images/boyCharacter.png", 300, 300);
+            tBoySprite.setPosition(200, 350);
+            tBoySprite.z = 5;
+            tBoySprite.setSpeed(0);
+            tBoySprite.visible = true;
+
+                tBoySprite.clicked = function(){
+                    console.log("this was successful!");
+                    document.location.href = "selfAdvocacy.html?gender=boy";
+                }
+
+            return tBoySprite;
+        }
+
+        function GirlSprite() {
+            tGirlSprite = new Sprite(scene, "images/girlCharacter.png", 300, 300);
+            tGirlSprite.setPosition (600, 350);
+            tGirlSprite.z = 5;
+            tGirlSprite.setSpeed(0);
+            tGirlSprite.visible = true;
+
+                tGirlSprite.clicked = function(){
+                    console.log("this was successful!");
+                    document.location.href = "selfAdvocacy.html?gender=girl";
+                }
+
+            return tGirlSprite;
+        }
+
+        function BG(scene, image, width, height, x, y, z) {
+        // Static background sprite.
+            tBG = new Sprite(scene, image, width, height, z);
+            tBG.setSpeed(0);
+            tBG.setPosition(x, y);
+
+            return tBG;
+        }
+
+        function update() {
+            scene.clear();
+            background.update();
+            girlSprite.update();
+            boySprite.update();
+        }
+
+
+        function init(){
+            Joy = new Joy();
+            scene = new Scene();
+            scene.setSize(948, 711);
+            boySprite = new BoySprite();
+            girlSprite = new GirlSprite();
+            background = new BG(scene, 'images/selectCharacterBG.png', 948, 711, 474, 356, 1);
+
+            scene.start();
+        }
+
+    </script>
+</head>
+<body onload = "init()">
+</body>
+</html>

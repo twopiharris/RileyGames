@@ -1,0 +1,14 @@
+{
+"situation":"After testing my blood sugar, I find that it's at\n60 and needs to be corrected. I forgot my\njuice to correct it and now I must head home.",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Head\nHome","link":"nodes/soccer.txt","width":"250", "height":"75", "x":"860", "y":"200"}],
+"helpText":"Because you forgot your juice,\nyou are unable to correct\nyour blood sugar before you eat.",
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"474", "y":"407"},
+"blockPositions":[{"x":"0", "y":"475"}, {"x":"50", "y":"475"}, {"x":"350", "y":"474"}, {"x":"450", "y":"475"},{"x":"500", "y":"475"},
+{"x":"0", "y":"400"},
+{"x":"210", "y":"325"}, {"x":"260", "y":"325"},
+{"x":"475", "y":"250"}, {"x":"525", "y":"250"}, {"x":"575", "y":"250"}, {"x":"625", "y":"250"}, {"x":"675", "y":"250"}, {"x":"725", "y":"250"}, {"x":"775", "y":"250"}, {"x":"825", "y":"250"}, {"x":"875", "y":"250"}, {"x":"925", "y":"250"}],
+"blockMovements":[{"bNum": "2", "speed": "7"}]
+}

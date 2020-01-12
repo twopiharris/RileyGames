@@ -1,0 +1,60 @@
+// This file contains the basic structure for making a platformer level with documentation.
+// If you copy and paste everything, you'll need to delete any comments (denoted by //) for it to work. To avoid doing this, just copy from the undocumented example: "ex.txt"
+// Anything labelled as "optional" can be left out of the level file.
+// Anything labelled as "many" means any number of these items can be defined.
+// Anything labelled as "saved" means if it is optional and it is not defined for a level, the most recently defined value for the object will be used.
+
+{
+"situation":"This is a situation!",
+// This is the question text for the level. It will be displayed in the situation textbox.
+
+"imgSrc":"BG0006.png",
+// This is the background image for the level.
+
+"soundSrc":"ding.mp3",
+// This is a sound that will be played at the begining of the level. Optional.
+
+"options":[{"text":"Choice 1", "link":"choice1.txt", "requirements":[{"type":"variable", "name":"color", "value":"blue"}, {"type":"item", "name":"chicken"}]}, {"text":"choice 2", "link":"choice2.txt"}],
+// Options define the number of goals and where they link to. Many.
+// Requirements can be defined for an option so that it is displayed only if all the requirements are met. A requirement can either specify a variable name and value, or an item name that should be in a player's inventory. Optional, many.
+
+"inventory":"reset",
+// Defines what any inventory a player has should do. Current values are: reset (removes all inventory), hidden. Optional.
+
+"BSMode":"stable",
+// Defines what the player's blood sugar levels will do. Current values are: stable, decreasing, increasing, hidden. Saved.
+
+"barValues":{"max":"240", "min":"20"},
+// Defines the maximum and minimum values for the BSBar. Saved.
+
+"barImages":{"background":"images/backBar.png", "foreground":"images/foreBar.png", "labels":"images/label.png", "slider":"images/slider.png"},
+// Defines the images the BSBar will display. Saved.
+
+"barSize":{"barWidth":"128", "barHeight":"32", "sliderWidth":"32", "sliderHeight":"32"},
+// Defines the size of the BSBar and its slider. Saved.
+
+"items":[{"imageSrc":"chicken", "width":"32","height":"32","x":"100","y":"100","z":"1","name":"chicken"}],
+// Defines any items in the level. Items need names in order to be checked as a requirement. Optional, many.
+
+"variables":[{"name":"color", "value":"blue"}],
+// Defines a variable to be set when the level loads. Optional, many.
+
+"playerStart":{"x":"20", "y":"300"},
+// Defines where the player starts. Saved.
+
+"playerAnimation":{"walkFrames":"19", "beginWalkFile":"playerWalk", "endWalkFile":".png", "beginJumpFile":"playerJump", "endJumpFile":".png"},
+// Defines how many walk frames and the file paths/extentions of the walking and jumping images. Saved.
+// Note on file names: images should be named beginWalkFile + R/L + frameNumber + endWalkFile where R/L is either Right or Left.
+
+"playerMovement":{"moveSpeed":"1", "maxSpeed":"10", "slowingSpeed":"2", "jumpSpeed":"10", "fallSpeed":"2"},
+// Defines how fast the player moves/falls. Saved.
+
+"playerSize":{"width":"64", "height":"112"},
+// Defines the size of the player. Saved.
+
+"blockAttributes":{"image":"block.png", "width":"50", "height":"10"},
+// Defines what all the blocks look like. Optional.
+
+"blockPositions":[{"x":"20", "y":"400"}, {"x":"60", "y":"400"}]
+// Defines where the blocks the player can walk on are. Optional, many.
+}

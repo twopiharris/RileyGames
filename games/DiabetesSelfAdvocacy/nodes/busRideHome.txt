@@ -1,0 +1,17 @@
+{
+"situation":"Situation Text",
+"imgSrc":"images/busRide.png",
+"options":[{"text":"Continue", "link":"nodes/afterBusRideHome.txt", "width":"100", "height":"75", "x":"525", "y":"75", "answer":"correct"}],
+"helpText":"Help Text",
+"inventory":"resetNone",
+"maxInvo":"2",
+"BSMode":"stable",
+"playerStart":{"x":"50", "y":"300"},
+"blockPositions":[{"x":"0", "y":"400"}, {"x":"50", "y":"400"}, {"x":"100", "y":"400"}, {"x":"150", "y":"400"}, {"x":"700", "y":"400"}, {"x":"750", "y":"400"}, {"x":"800", "y":"400"}, {"x":"850", "y":"400"}, {"x":"900", "y":"400"}, {"x":"950", "y":"400"}, 
+{"x":"425", "y":"600"},
+{"x":"925", "y":"325"}, 
+{"x":"765", "y":"250"},
+{"x":"925", "y":"175"},
+{"x":"700", "y":"125"}, {"x":"650", "y":"125"}, {"x":"600", "y":"125"}, {"x":"550", "y":"125"}, {"x":"500", "y":"125"}],
+"springPositions":[{"x":"425", "y":"570"}]
+}

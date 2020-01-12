@@ -1,0 +1,20 @@
+{
+"situation":"Back to school.  What a busy day!.. Ohh no! You didnt eat at\nleast 75% carbs! Now your blood sugar level is dropping!",
+"imgSrc":"images//BG0001.png",
+"options":[{"text":"Continue", "link":"nodes/endOfGame.txt", "width":"100", "height":"75", "x":"75", "y":"150", "answer":"correct"}],
+"helpText":"Good Job! Game completed!",
+"inventory":"resetNone",
+"maxInvo":"2",
+"BSMode":"decreasing",
+"barValues":{"min":"20", "max":"240"},
+"barSize":{"barWidth":"240", "barHeight":"32", "sliderWidth":"32", "sliderHeight":"32"},
+"playerStart":{"x":"50", "y":"510"},
+"blockPositions":[{"x":"0", "y":"600"}, {"x":"50", "y":"600"}, {"x":"100", "y":"600"}, {"x":"150", "y":"600"}, {"x":"200", "y":"600"}, {"x":"250", "y":"600"}, {"x":"300", "y":"600"}, {"x":"350", "y":"600"}, {"x":"400", "y":"600"},
+{"x":"0", "y":"325"}, {"x":"150", "y":"325"}, {"x":"948", "y":"325"}, 
+{"x":"750", "y":"250"}, {"x":"800", "y":"250"}, {"x":"850", "y":"250"}, {"x":"900", "y":"250"}, {"x":"950", "y":"250"},
+{"x":"935", "y":"175"},
+{"x":"700", "y":"125"}, {"x":"650", "y":"125"}, {"x":"600", "y":"125"}, {"x":"550", "y":"125"}, {"x":"500", "y":"125"}, {"x":"450", "y":"125"},
+{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"200", "y":"200"}, {"x":"250", "y":"200"}],
+"blockMovements":[{"bNum":"10", "speed":"10"}],
+"springPositions":[{"x":"400", "y":"570"}]
+}

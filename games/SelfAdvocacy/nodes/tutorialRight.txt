@@ -1,0 +1,10 @@
+{
+"imgSrc":"images/tutorial.png",
+"situation":"Welcome to the tutorial! Here you will learn the controls to\nthe game. Swipe your finger to the right of the\nscreen to move right. If you get stuck, just tap on Nurse Cat\nin the bottom right corner.",
+"options":[{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/tutorialLeft.txt","width":"250", "height":"75", "x":"800", "y":"150", "answer":"correct"}],
+"helpText":"Swipe your finger right",
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"20", "y":"100"},
+"blockPositions":[{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"200", "y":"200"}, {"x":"250", "y":"200"}, {"x":"300", "y":"200"}, {"x":"350", "y":"200"}, {"x":"400", "y":"200"}, {"x":"450", "y":"200"}, {"x":"500", "y":"200"}, {"x":"550", "y":"200"}, {"x":"600", "y":"200"}, {"x":"650", "y":"200"}]
+}

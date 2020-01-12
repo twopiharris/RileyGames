@@ -1,0 +1,15 @@
+{
+"situation":"While at my friends house, it gets to be supper time!\nPizza is for dinner and its time to check my blood sugar level.\nBut oops, I forgot my meter! Now I have to head home.",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Head\nHome","link":"nodes/soccer.txt","width":"250", "height":"75", "x":"50", "y":"525"}],
+"helpText":"Because you forgot your meter\n you aren't able to check your\nblood sugar level.",
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"50", "y":"50"},
+"blockPositions":[{"x":"0", "y":"150"}, {"x":"50", "y":"150"}, {"x":"100", "y":"150"}, {"x":"150", "y":"150"}, {"x":"200", "y":"150"}, {"x":"250", "y":"149"}, {"x":"600", "y":"150"}, {"x":"650", "y":"150"}, {"x":"700", "y":"150"},
+{"x":"875", "y":"250"}, {"x":"925", "y":"250"},
+{"x":"750", "y":"350"}, {"x":"800", "y":"350"},
+{"x":"0", "y":"450"}, {"x":"600", "y":"449"}, {"x":"675", "y":"450"},
+{"x":"-20", "y":"575"}, {"x":"30", "y":"575"}, {"x":"80", "y":"575"}],
+"blockMovements":[{"bNum": "5", "speed": "8"}, {"bNum":"14", "speed":"10"}]
+}

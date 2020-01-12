@@ -1,0 +1,18 @@
+{
+"situation":"I was able to get my blood sugar level back over 80! After eating\nthe pizza I have counted the carbs and am now ready\nto give myself insulin. Grab the insulin to continue.",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Continue","link":"nodes/friendsForgot0pt3.txt","width":"250", "height":"75", "x":"55", "y":"150"},
+{"text":"Continue","link":"nodes/overNightSnack.txt","width":"250", "height":"75", "x":"55", "y":"150"}],
+"helpText":"After eating, you need to count\nyour carbs in order to give\nyourself the correct ammount of insulin",
+"items":[{"imageSrc":"KetostixInsulin.png","width":"64","height":"64","x":"725","y":"150","z":"3","name":"item1"}],
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"40", "y":"407"},
+"blockPositions":[{"x":"25", "y":"475"}, {"x":"75", "y":"475"}, {"x":"125", "y":"474"}, {"x":"823", "y":"475"}, {"x":"873", "y":"475"}, {"x":"923", "y":"475"},
+{"x":"948", "y":"425"},
+{"x":"700", "y":"340"}, {"x":"750", "y":"340"},
+{"x":"475", "y":"265"},
+{"x":"725", "y":"190"},
+{"x":"250", "y":"190"}, {"x":"200", "y":"190"}, {"x":"150", "y":"190"}, {"x":"100", "y":"190"}, {"x":"50", "y":"190"}, {"x":"0", "y":"190"}],
+"blockMovements":[{"bNum": "2", "speed": "7"}, {"bNum":"3", "speed":"-7"}]
+}

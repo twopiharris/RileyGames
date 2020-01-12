@@ -1,0 +1,10 @@
+{
+"situation":"Swipe your finger to the left of the screen\n to move left.",
+"imgSrc":"images/tutorial.png",
+"options":[{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/tutorialMonitor.txt","width":"150", "height":"75", "x":"125", "y":"175", "answer":"correct"}],
+"helpText":"Swipe your finger left.",
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"900", "y":"100"},
+"blockPositions":[{"x":"300", "y":"200"}, {"x":"350", "y":"200"}, {"x":"400", "y":"200"}, {"x":"450", "y":"200"}, {"x":"500", "y":"200"}, {"x":"550", "y":"200"}, {"x":"600", "y":"200"}, {"x":"650", "y":"200"}, {"x":"700", "y":"200"}, {"x":"750", "y":"200"}, {"x":"800", "y":"200"},{"x":"850", "y":"200"},{"x":"900", "y":"200"},{"x":"950", "y":"200"}]
+}

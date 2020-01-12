@@ -1,0 +1,17 @@
+{
+"situation":"While at my friends house, it gets to be supper time!\nPizza is for dinner and its time to check my blood sugar level.\nGrab your meter to continue!",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Continue","link":"nodes/friendsForgot3.txt","width":"250", "height":"75", "x":"70", "y":"525"},
+{"text":"Continue","link":"nodes/friendsForgot3pt2.txt","width":"250", "height":"75", "x":"70", "y":"525"}],
+"helpText":"Test your blood sugar\n before you eat!",
+"items":[{"imageSrc":"meterTestStrips.png","width":"64","height":"64","x":"900","y":"75","z":"3","name":"item1"}],
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"50", "y":"50"},
+"blockPositions":[{"x":"0", "y":"150"}, {"x":"50", "y":"150"}, {"x":"100", "y":"150"}, {"x":"150", "y":"150"}, {"x":"200", "y":"150"}, {"x":"250", "y":"149"}, {"x":"600", "y":"150"}, {"x":"650", "y":"150"}, {"x":"700", "y":"150"},
+{"x":"875", "y":"250"}, {"x":"925", "y":"250"},
+{"x":"750", "y":"350"}, {"x":"800", "y":"350"},
+{"x":"0", "y":"450"}, {"x":"600", "y":"449"}, {"x":"675", "y":"450"},
+{"x":"-20", "y":"575"}, {"x":"30", "y":"575"}, {"x":"80", "y":"575"}],
+"blockMovements":[{"bNum": "5", "speed": "8"}, {"bNum":"14", "speed":"10"}]
+}

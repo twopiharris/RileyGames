@@ -1,0 +1,19 @@
+{
+"situation":"This is a situation!",
+"imgSrc":"BG0006.png",
+"soundSrc":"ding.mp3",
+"options":[{"text":"Choice 1", "link":"choice1.txt", "requirements":[{"type":"variable", "name":"color", "value":"blue"}, {"type":"item", "name":"chicken"}]}, {"text":"choice 2", "link":"choice2.txt"}],
+"inventory":"reset",
+"BSMode":"stable",
+"barValues":{"max":"240", "min":"20"},
+"barImages":{"background":"images/backBar.png", "foreground":"images/foreBar.png", "labels":"images/label.png", "slider":"images/slider.png"},
+"barSize":{"barWidth":"128", "barHeight":"32", "sliderWidth":"32", "sliderHeight":"32"},
+"items":[{"imageSrc":"chicken", "width":"32","height":"32","x":"100","y":"100","z":"1","name":"chicken"}],
+"variables":[{"name":"color", "value":"blue"}],
+"playerStart":{"x":"20", "y":"300"},
+"playerAnimation":{"walkFrames":"19", "beginWalkFile":"playerWalk", "endWalkFile":".png", "beginJumpFile":"playerJump", "endJumpFile":".png"},
+"playerMovement":{"moveSpeed":"1", "maxSpeed":"10", "slowingSpeed":"2", "jumpSpeed":"10", "fallSpeed":"2"},
+"playerSize":{"width":"64", "height":"112"},
+"blockAttributes":{"image":"block.png", "width":"50", "height":"10"},
+"blockPositions":[{"x":"20", "y":"400"}, {"x":"60", "y":"400"}]
+}

@@ -1,0 +1,20 @@
+{
+"situation":"One of my teachers notices that I haven't tested my blood sugar yet\nand reminds me that I need to test my blood sugar before every\nmeal so that I know how much insulin to give myself afterwards.\nI don't want to guess at my insulin dose.",
+"imgSrc":"images/picnicTables.png",
+"options":[{"text":"I should test my\nblood sugar to\ncontinue.", "link":"nodes/picnicWrong.txt", "width":"100", "height":"75", "x":"85", "y":"45", "answer":"incorrect"},
+{"text":"I should test my\nblood sugar to\ncontinue.","link":"nodes/groupLeader.txt","width":"100", "height":"75", "x":"85", "y":"45", "answer":"correct"}],
+"helpText":"Make sure you grab the\nmonitor before you try to\ncontinue.",
+"inventory":"reset",
+"items":[{"imageSrc":"monitor.png","width":"64","height":"64","x":"895","y":"200","z":"3","name":"item1"}],
+"maxInvo":"1",
+"BSMode":"hidden",
+"playerStart":{"x":"50", "y":"400"},
+"blockPositions":[{"x":"0", "y":"500"}, {"x":"50", "y":"500"}, {"x":"100", "y":"500"}, {"x":"150", "y":"500"},
+{"x":"300", "y":"425"}, {"x":"350", "y":"425"},
+{"x":"500", "y":"500"}, {"x":"550", "y":"500"}, {"x":"600", "y":"500"}, {"x":"650", "y":"500"}, {"x":"700", "y":"500"},
+{"x":"870", "y":"405"}, {"x":"920", "y":"405"},
+{"x":"600", "y":"330"}, {"x":"650", "y":"330"},
+{"x":"870", "y":"240"}, {"x":"920", "y":"240"},
+{"x":"350", "y":"260"}, {"x":"400", "y":"260"},
+{"x":"280", "y":"200"}, {"x":"230", "y":"200"}, {"x":"180", "y":"200"}, {"x":"130", "y":"200"}, {"x":"80", "y":"200"}, {"x":"30", "y":"200"}]
+}

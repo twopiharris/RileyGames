@@ -1,0 +1,15 @@
+{
+"situation":"Sometimes in order to continue, you need to pick up items.\n Run into the star to pick it up!",
+"imgSrc":"images/tutorial.png",
+"options":[{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/tutorialItem.txt","width":"150", "height":"75", "x":"800", "y":"250", "answer":"incorrect"},
+{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/beginning.txt","width":"150", "height":"75", "x":"800", "y":"250", "answer":"correct"}],
+"items":[{"imageSrc":"tutorialItem.png","width":"75","height":"75","x":"50","y":"100","z":"3","name":"item1"}],
+"helpText":"You must pick up the item\nto continue.",
+"playerStart":{"x":"20", "y":"275"},
+"inventory":"reset",
+"BSMode":"stable",
+"blockPositions":[{"x":"0", "y":"350"}, {"x":"50", "y":"350"}, {"x":"100", "y":"350"}, {"x":"250", "y":"350"}, {"x":"300", "y":"350"}, {"x":"350", "y":"350"}, {"x":"400", "y":"350"}, {"x":"450", "y":"350"},
+ {"x":"600", "y":"285"}, {"x":"650", "y":"285"}, 
+ {"x":"350","y":"225"},{"x":"400","y":"225"},
+ {"x":"250", "y":"140"},{"x":"200", "y":"140"},{"x":"150", "y":"140"},{"x":"100", "y":"140"},{"x":"50", "y":"140"}]
+}

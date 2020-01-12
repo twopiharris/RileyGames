@@ -1,0 +1,15 @@
+{
+"situation":"I was able to get my blood sugar level back over 80! After eating\nthe pizza I have counted the carbs and am now ready to give myself insulin.\nBut oops, I forgot my insulin! Now I have to head home.",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Head\nHome","link":"nodes/soccer.txt","width":"250", "height":"75", "x":"55", "y":"135"}],
+"helpText":"Because you forgot your insulin,\nyou must go home so you can count\nyour carbs and take the insulin.",
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"40", "y":"407"},
+"blockPositions":[{"x":"25", "y":"475"}, {"x":"75", "y":"475"}, {"x":"125", "y":"474"}, {"x":"823", "y":"475"}, {"x":"873", "y":"475"}, {"x":"923", "y":"475"},
+{"x":"948", "y":"425"},
+{"x":"700", "y":"340"}, {"x":"750", "y":"340"},
+{"x":"475", "y":"265"},
+{"x":"250", "y":"190"}, {"x":"200", "y":"190"}, {"x":"150", "y":"190"}, {"x":"100", "y":"190"}, {"x":"50", "y":"190"}, {"x":"0", "y":"190"}],
+"blockMovements":[{"bNum": "2", "speed": "7"}, {"bNum":"3", "speed":"-7"}]
+}

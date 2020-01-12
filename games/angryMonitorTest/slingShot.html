@@ -1,0 +1,766 @@
+<!DOCTYPE HTML>
+<html lang="en-US"><head>
+    <meta charset="UTF-8" name="apple-mobile-web-app-capable" content="yes">
+    <title>SlingShot.html</title>
+    <script type = "text/javascript" src = "../simpleGame.js"></script>
+	<script type = "text/javascript" src = "classes/slingShotLib.js"></script>
+	<script type = "text/javascript" src = "classes/prepost.js"></script>
+	<script type = "text/javascript" src = "../Helper/helper.js"></script>
+    <script type = "text/javascript" src = "classes/Sling.js"></script>
+    <script type = "text/javascript" src = "classes/Ball.js"></script>
+    <script type = "text/javascript" src = "classes/Goal.js"></script>
+    <script type = "text/javascript" src = "classes/Block.js"></script>
+    <script type = "text/javascript" src = "classes/Fan.js"></script>
+    <script type = "text/javascript" src = "classes/BG.js"></script>
+    <script type = "text/javascript" src = "classes/SlingTextBox.js"></script>
+    <script type = "text/javascript" src = "classes/TutorialBox.js"></script>
+    <script type = "text/javascript" src = "classes/PostBox.js"></script>
+    <script type = "text/javascript" src = "classes/SlingQuestion.js"></script>
+    <script type="text/javascript">
+		var level;
+		var levels;
+		var levelCounter;
+	
+		//------------------Tutorials---------------------------\\
+		function tutorialBasic() {
+			level.scenarioImage = 'scenarios/Tutorial.png';
+			level.goalCount = 1;
+			level.answers = ['Aim\nhere!'];
+			level.goalsImage = ['icons64/HappyCatIcon.png'];
+			level.goalsColor = ['#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7];
+			level.goalsWidth = [125];
+			level.goalsHeight = [75];
+			level.correct = 0;
+			level.helperClue = "Hey kids! I'll give you great\nhints if you need them. When\nyou're done reading my hints,\ntap my speech bubble.";
+			level.explanation = 'At the end of the level, an explanation of why an\nanswer is right will show up. When you are done\nreading it, tap the box to go on.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 470
+			level.postBoxHeight = 200;
+			
+			level.tutorialSceneCount = 6;
+			level.tutorialText = ['Welcome to "What do these\nnumbers mean?" The goal is to\nfigure out what to do with\ndifferent blood sugar readings.\nTap the text boxes to continue.',
+								 'This label will tell you where you are and what time it is.',
+								 'Here is your monitor. It will tell you what your blood sugar is at. To complete a level, you need to sling your monitor at the correct answer box.',
+								 'This is an answer box. You will need to read carefully to get the right answer.',
+								 "If you don't know an answer, tap Nurse Cat to get some help. Try it now!",
+								 'Drag the monitor around to aim it. Then lift your finger and let it fly!'];
+			level.tutorialTarget = ['', 'question', 'monitor', 'goal', 'helper', 'monitor'];
+			level.tutorialBoxImage = [null, 'arrows/arrow1.png', 'arrows/arrow2.png', 'arrows/arrow3.png', 'arrows/arrow3.png', 'arrows/arrow4.png'];
+			level.tutorialBoxColor = ['#001D74', '#001D74', '#001D74', '#001D74', '#001D74', '#001D74'];
+			level.tutorialBoxAlpha = [0.7, 0, 0, 0, 0, 0];
+			level.tutorialBoxFont = ['Arial', 'Arial', 'Arial', 'Arial', 'Arial', 'Arial'];
+			level.tutorialBoxFontSize = [20, 20, 20, 20, 20, 20];
+			level.tutorialBoxFontColor = ['#FFFFFF', '#000000', '#000000', '#000000', '#000000', '#000000'];
+			level.tutorialBoxWidth = [300, 225, 350, 250, 250, 225];
+			level.tutorialBoxHeight = [130, 80, 150, 110, 110, 120];
+			level.tutorialBoxX = [474, 355, 120, 320, 500, 120];
+			level.tutorialBoxY = [290, 20, 420, 45, 570, 420];
+			level.tutorialBoxBorderSize = [2, 2, 2, 2, 2, 2];
+			level.tutorialBoxBorderColor = ['#000000', '#000000', '#000000', '#000000', '#000000', '#000000'];
+			level.tutorialBoxBorderAlpha = [1, 0, 0, 0, 0, 0];
+			level.tutorialBoxMarginTop = [5, 5, 15, 10, 10, 10];
+			level.tutorialBoxMarginBottom = [5, 5, 5, 5, 5, 5];
+			level.tutorialBoxMarginRight = [5, 5, 5, 45, 45, 5];
+			level.tutorialBoxMarginLeft = [5, 40, 65, 5, 5, 45];
+		} // end tutorialBasic
+		
+		function tutorialMed() {
+			level.bgImage = 'bg/BG0001.png';
+			level.scenarioImage = 'scenarios/Tutorial.png';
+			level.questionDetails = 'The monitor will bounce off blocks so aim carefully!';
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.goalCount = 1;
+			level.answers = ['Aim\nhere!'];
+			level.goalsImage = ['icons64/HappyCatIcon.png'];
+			level.goalsColor = ['#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7];
+			level.goalsWidth = [110];
+			level.goalsHeight = [75];
+			level.goalsX = [660];
+			level.goalsY = [100];
+			level.correct = 0;
+			level.helperClue = 'Sometimes blocks are helpful\nif you bounce the right way.';
+			level.explanation = 'Good job and good luck!';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxHeight = 160;
+			level.postBoxMarginTop = 65;
+			
+			level.numBlocks = 1;
+			level.blocksImage = ['blocks/block.png'];
+			level.blocksWidth = [64];
+			level.blocksHeight = [64];
+			level.blocksX = [300];
+			level.blocksY = [300];
+			
+			level.tutorialSceneCount = 1;
+			level.tutorialText = ["This is a block. Your\nmonitor will bounce off of\nit. But don't worry! The\nblock will break after\nhitting it a few times."];
+			level.tutorialTarget = ['block'];
+			level.tutorialBoxImage = ['arrows/arrow5.png'];
+			level.tutorialBoxColor = ['#001D74'];
+			level.tutorialBoxAlpha = [0];
+			level.tutorialBoxFont = ['Arial'];
+			level.tutorialBoxFontSize = [20];
+			level.tutorialBoxFontColor = ['#000000'];
+			level.tutorialBoxWidth = [285];
+			level.tutorialBoxHeight = [135];
+			level.tutorialBoxX = [500];
+			level.tutorialBoxY = [300];
+			level.tutorialBoxBorderSize = [2];
+			level.tutorialBoxBorderColor = ['#000000'];
+			level.tutorialBoxBorderAlpha = [0];
+			level.tutorialBoxMarginTop = [12];
+			level.tutorialBoxMarginBottom = [5];
+			level.tutorialBoxMarginRight = [5];
+			level.tutorialBoxMarginLeft = [125];
+		} // end tutorialMed
+		
+		function tutorialHard() {
+			level.bgImage = 'bg/BG0001.png';
+			level.scenarioImage = 'scenarios/Tutorial.png';
+			level.questionDetails = "Fans will push your monitor when they're on!";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.goalCount = 1;
+			level.answers = ['Aim\nhere!'];
+			level.goalsImage = ['icons64/HappyCatIcon.png'];
+			level.goalsColor = ['#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7];
+			level.goalsWidth = [110];
+			level.goalsHeight = [75];
+			level.goalsX = [660];
+			level.goalsY = [100];
+			level.correct = 0;
+			level.helperClue = 'Fans may be helpful\nif you can time it right.';
+			level.clueY = 450;
+			level.clueWidth = 260;
+			//level.clueStyle = 0;
+			level.explanation = 'Good job and good luck!';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxHeight = 160;
+			level.postBoxMarginTop = 65;
+			
+			level.numBlocks = 0;
+			
+			level.numFans = 1;
+			level.fansOffImage = ['Fan/fan1.png'];
+			level.fansOnImage = ['Fan/fanEffects6.png'];
+			level.fansWidth = [125];
+			level.fansHeight = [125];
+			level.fansX = [350];
+			level.fansY = [648];
+			level.fansStrength = [20];
+			level.fansDirection = [0];
+			level.fansEffectXOffset = [0];
+			level.fansEffectYOffset = [-300];
+			level.fansEffectWidth = [125];
+			level.fansEffectHeight = [600];
+			level.fansEffectMaxDistance = [600];
+			level.fansEffectFramePeriod = [30];
+			level.fansOffFrames = [1];
+			level.fansOffImagePre = ['Fan/fan'];
+			level.fansOffImagePost = ['.png'];
+			level.fansOnFrames = [4];
+			level.fansOnImagePre = ['Fan/fan'];
+			level.fansOnImagePost = ['.png'];
+			
+			level.tutorialSceneCount = 1;
+			level.tutorialText = ["This is a fan. It will\npush your monitor away\nwhen it is on, so time\nyour release carefully!"];
+			level.tutorialTarget = ['fan'];
+			level.tutorialBoxImage = ['arrows/arrow6.png'];
+			level.tutorialBoxColor = ['#001D74'];
+			level.tutorialBoxAlpha = [0];
+			level.tutorialBoxFont = ['Arial'];
+			level.tutorialBoxFontSize = [20];
+			level.tutorialBoxFontColor = ['#000000'];
+			level.tutorialBoxWidth = [285];
+			level.tutorialBoxHeight = [110];
+			level.tutorialBoxX = [580];
+			level.tutorialBoxY = [620];
+			level.tutorialBoxBorderSize = [2];
+			level.tutorialBoxBorderColor = ['#000000'];
+			level.tutorialBoxBorderAlpha = [0];
+			level.tutorialBoxMarginTop = [10];
+			level.tutorialBoxMarginBottom = [5];
+			level.tutorialBoxMarginRight = [5];
+			level.tutorialBoxMarginLeft = [55];
+		} // end tutorialHard
+	
+		//----------------Easiest Levels-------------------\\
+		// afterLunchEasy, beforeLunchEasy, beforeDinnerEasy, beforeBreakfastEasy,
+		function afterLunchEasy() {
+			level.scenarioImage = 'scenarios/scenarios0001.png';
+			level.questionDetails = "Level 1\nBS of 55 in class after lunch.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.answers = ['Drink 1/2 cup juice or\neat 15 skittles and\nretest in 15 minutes.',
+							 'Put your head down\non your desk until\nyou feel better.',
+							 'Eat a chocolate bar until\nclass is over and you can\ngo to the nurse.'];
+			level.goalsImage = ['icons64/JuiceSkittles.png', 'icons64/No.png', 'icons64/Chocolate.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [220, 210, 245];
+			level.goalsHeight = [66, 66, 66];
+			level.goalsX = [205, 510, 810];
+			level.goalsY = [135, 285, 435];
+			level.correct = 0;
+			level.helperClue = "Don't delay treating a low!";
+			/*level.clueWidth = 250;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = "If BS is less than 80, give 15 grams of fast acting\ncarb and retest in 15 minutes. Once above 80 and\nif you’re not eating a meal for an hour or more,\neat 15 grams of starchy carb. Since you just ate\nlunch, you will need the extra starchy carbs.";
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 260;
+		} // end afterLunchEasy
+		
+		function beforeLunchEasy() {
+			level.slingX = 450;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0002.png';
+			level.scenarioImage = 'scenarios/scenarios0002.png';
+			level.questionDetails = "Level 2\nBS of 68 just before lunch.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.answers = ['Go to lunch.',
+							 'Treat with 15 grams of candy,\nthen retest in 15 minutes to\nmake sure your BS is above 80\nbefore going to lunch.',
+							 'Take your\ninsulin and\ngo to lunch.'];
+			level.goalsImage = ['icons64/dinner.png', 'icons64/Skittles80.png', 'icons64/Insulin.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [150, 270, 160];
+			level.goalsHeight = [66, 75, 66];
+			level.goalsX = [170, 460, 780];
+			level.goalsY = [335, 135, 335];
+			level.correct = 1;
+			level.helperClue = 'Treat before you eat!';
+			/*level.clueWidth = 200;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'If BS is less than 80, give 15 grams of fast\nacting carb and retest in 15 minutes. Your BS\nmust be above 80 before moving on with your\nday.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 220;
+		} // end beforeLunchEasy
+		
+		function beforeDinnerEasy() {
+			level.bgImage = 'bg/BG0005.png';
+			level.questionDetails = "Level 3\n20 minutes before dinner, BS is 75.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.slingY = 200;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0003.png';
+			level.scenarioImage = 'scenarios/scenarios0003.png';
+			level.answers = ['Eat dinner since\nyou are so close\nto 80.',
+							 'Treat with 15\ngrams of milk,\nthen eat dinner.',
+							 'Treat with 15 grams of juice,\nthen retest in 15 minutes to\nmake sure your BS is above 80\nbefore going to dinner.'];
+			level.goalsImage = ['icons64/dinner.png', 'icons64/milk.png', 'icons64/Juice.png'];
+			level.goalsColor = ['#FFFF00', '#FFFF00', '#FFFF00'];
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [190, 180, 280];
+			level.goalsHeight = [66, 66, 75];
+			level.goalsX = [190, 445, 790];
+			level.goalsY = [585, 485, 385];
+			level.postBoxFontColor = '#000000';
+			level.goalFontColor = '#000000';
+			level.correct = 2;
+			level.helperClue = 'Treat before you eat!';
+			/*level.clueWidth = 200;
+			level.clueHeight = 75;
+			level.clueColor = '#FFFF00';
+			level.clueAlpha = 0.7;*/
+			level.explanation = 'If BS is less than 80, give 15 grams of fast\nacting carb and retest in 15 minutes. Your BS\nmust be above 80 before moving on with your\nday.';
+			level.postBoxColor = '#FFFF00';
+			level.postBoxAlpha = 0.7;
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 220;
+		} // end beforeDinnerEasy
+		
+		function beforeBreakfastEasy() {
+			level.bgImage = 'bg/BG0004.png';
+			level.questionDetails = "Level 4\nBS is 40 just before breakfast.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0004.png';
+			level.scenarioImage = 'scenarios/scenarios0004.png';
+			level.answers = ['Panic and\ncall 911.',
+							 'Treat with 15-30 grams of juice,\nsoda, or glucose gel. Retest in\n15 minutes. Retreat every 15\nminutes with 15 grams of fast\nacting carb until BS above 80.',
+							 'Give\nglucagon.'];
+			level.goalsImage = ['icons64/Phone.png', 'icons64/SodaJuiceGlucose.png', 'icons64/Glucagon.png'];
+			level.goalsColor = ['#FFFF00', '#FFFF00', '#FFFF00'];
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [150, 290, 140];
+			level.goalsHeight = [66, 90, 66];
+			level.postBoxFontColor = '#000000';
+			level.goalFontColor = '#000000';
+			level.goalsX = [225, 615, 825];
+			level.goalsY = [185, 65, 185];
+			level.correct = 1;
+			level.helperClue = 'Double up when less than 50.';
+			/*level.clueWidth = 240;
+			level.clueHeight = 60;
+			level.clueColor = '#FFFF00';
+			level.clueAlpha = 0.7;*/
+			level.explanation = 'If BS is less than 50, you can double your fast\nacting treatment. Give 30 grams of fast acting\ncarb and retest in 15 minutes. Once your BS is\ngreater than 50, you can treat with 15 grams of\nfast acting carb every 15 minutes, until BS is\nabove 80.';
+			level.postBoxColor = '#FFFF00';
+			level.postBoxAlpha = 0.7;
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 260;
+		} // end beforeBreakfastEasy
+		
+		//--------------Intermediate Levels-----------------\\
+		// beforeBreakfastMed, beforeDinnerMed, bedtimeMed, beforeBedMed, nightMed,
+		function beforeBreakfastMed() {
+			level.bgImage = 'bg/BG0004.png';
+			level.questionDetails = "Level 5\nBS is 130 before eating breakfast.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0005.png';
+			level.scenarioImage = 'scenarios/scenarios0005.png';
+			level.answers = ['Eat your breakfast\nand take your\ninsulin like normal.',
+							 'Drink juice, wait 15 minutes\nand retest your sugar to make\nsure your BS is over 180\nbefore you eat breakfast.',
+							 'Skip breakfast\nand skip your\ninsulin dose.'];
+			level.goalsImage = ['icons64/CerealInsulin.png', 'icons64/Juice180.png', 'icons64/No.png'];
+			level.goalsColor = ['#FFFF00', '#FFFF00', '#FFFF00'];
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [200, 275, 180];
+			level.goalsHeight = [66, 75, 66];
+			level.goalsX = [250, 535, 785];
+			level.goalsY = [135, 260, 335];
+			level.postBoxFontColor = '#000000';
+			level.goalFontColor = '#000000';
+			level.correct = 0;
+			level.helperClue = '130 is between 80-180.';
+			/*level.clueWidth = 240;
+			level.clueHeight = 60;
+			level.clueColor = '#FFFF00';
+			level.clueAlpha = 0.7;*/
+			level.explanation = "Your BS target range is 80-180. If a BS falls in\nrange, you don’t need to treat for a low, but you\nstill may need insulin. Calculate a normal\ncorrective dose and food dose.";
+			level.postBoxColor = '#FFFF00';
+			level.postBoxAlpha = 0.7;
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 220;
+			level.postBoxMarginTop = 128;
+			
+			level.numBlocks = 1;
+			level.blocksImage = ['blocks/block.png'];
+			level.blocksWidth = [64];
+			level.blocksHeight = [64];
+			level.blocksX = [200];
+			level.blocksY = [300];
+		} // end beforeBreakfastMed
+		
+		function beforeDinnerMed() {
+			level.bgImage = 'bg/BG0005.png';
+			level.questionDetails = "Level 6\nBS is 250 before dinner.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0006.png';
+			level.slingY = 200;
+			level.scenarioImage = 'scenarios/scenarios0006.png';
+			level.answers = ['Eat your dinner\nand take your\ninsulin like normal.',
+							 'Skip dinner\nbecause your\nsugar is too high.',
+							 'Retest your BS after\ndinner and take\nyour insulin based\non that BS.'];
+			level.goalsImage = ['icons64/eatandinsulin.png', 'icons64/No.png', 'icons64/Insulin.png'];
+			level.goalsColor = ['#FFFF00', '#FFFF00', '#FFFF00'];
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [200, 190, 215];
+			level.goalsHeight = [66, 66, 75];
+			level.goalsX = [195, 440, 750];
+			level.goalsY = [585, 485, 385];
+			level.postBoxFontColor = '#000000';
+			level.goalFontColor = '#000000';
+			level.correct = 0;
+			level.helperClue = "Not eating or treating\nwon’t help lower your BS.";
+			/*level.clueWidth = 240;
+			level.clueHeight = 75;
+			level.clueColor = '#FFFF00';
+			level.clueAlpha = 0.7;*/
+			level.explanation = 'Always test your BS before you eat and use that\nnumber to calculate your dose. 250 is just a\nnumber. Lower it by calculating a dose and giving\ninsulin.';
+			level.postBoxColor = '#FFFF00';
+			level.postBoxAlpha = 0.7;
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 220;
+			
+			
+			level.numBlocks = 2;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64];
+			level.blocksHeight = [64, 64];
+			level.blocksX = [140, 550];
+			level.blocksY = [325, 250];
+		} // end beforeDinnerMed
+		
+		function bedtimeMed() {
+			level.bgImage = 'bg/BG0006.png';
+			level.questionDetails = "Level 7\nBS is 90 at your bedtime check.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0007.png';
+			level.scenarioImage = 'scenarios/scenarios0007.png';
+			level.slingY = 450;
+			level.answers = ['Drink 15 grams of\nchocolate milk\nand go to bed.',
+							 'Drink 15 grams of juice,\nretest in 15 minutes, and\nthen drink 15 grams of\nchocolate milk.',
+							 "Go to bed,\nyou’re fine."];
+			level.goalsImage = ['icons64/chocmilk.png', 'icons64/JuiceChocMilk.png', 'icons64/No.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [190, 240, 150];
+			level.goalsHeight = [66, 75, 66];
+			level.goalsX = [496, 495, 675];
+			level.goalsY = [482, 90, 283];
+			level.correct = 0;
+			level.helperClue = 'Bedtime BS target\nrange is 100-180';
+			/*level.clueWidth = 260;
+			level.clueHeight = 60;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'If between 80-100 at bedtime or overnight, you\nneed a little extra (15 grams) starchy carb to get\nyou through the night.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 200;
+			
+			level.numBlocks = 6;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64, 64, 64, 64, 64];
+			level.blocksHeight = [64, 64, 64, 64, 64, 64];
+			level.blocksX = [368, 343, 568, 622, 647, 782];
+			level.blocksY = [482, 93, 282, 482, 93, 282];
+		} // end bedtimeMed
+		
+		function beforeBedMed() {
+			level.bgImage = 'bg/BG0006.png';
+			level.questionDetails = "Level 8\nBS is 75 before you go to bed.";
+			level.questionBoxWidth = 400;
+			level.questionBoxHeight = 115;
+			level.slingX = 450;
+			level.slingY = 650;
+			level.scenarioImage = 'scenarios/scenarios0008.png';
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0003.png';
+			level.answers = ['Eat 40 grams of\ncereal and take\ninsulin for it.',
+							 "Go to bed,\nyou’re fine.",
+							 'Treat with 15 grams fast\nacting carb and retest in\n15 minutes. Once BS is\nabove 80, eat 15 grams of\nstarchy carb and go to bed.'];
+			level.goalsImage = ['icons64/CerealInsulin.png', 'icons64/No.png', 'icons64/FastNStarchyCarbs.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [190, 150, 260];
+			level.goalsHeight = [66, 66, 90];
+			level.goalsX = [175, 455, 785];
+			level.goalsY = [335, 135, 330];
+			level.correct = 2;
+			level.helperClue = 'Carbs keep sugar up;\ninsulin makes sugar drop.';
+			/*level.clueWidth = 240;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'No matter what time of day, if your BS is less than\n80, treat with 15 grams of fast acting carb and\nretest in 15 minutes. Once above 80 and if you are\nnot eating a meal for an hour or more, eat 15\ngrams of starchy carb. Since you are going to bed\nand not eating until morning, you will need the\nextra starchy carbs.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 280;
+			
+			level.numBlocks = 3;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64, 64];
+			level.blocksHeight = [64, 64, 64];
+			level.blocksX = [300, 630, 465];
+			level.blocksY = [480, 480, 290];
+		} // end beforeBedMed
+		
+		function nightMed() {
+			level.bgImage = 'bg/BG0006.png';
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0009.png';
+			level.scenarioImage = 'scenarios/scenarios0009.png';
+			level.questionDetails = 'Level 9\nIt is the middle of the night and you wake up\nfeeling dizzy. You check your sugar and it is 60.\nYou ask your Mom to help you and she gives you 15\ngrams of candy. You recheck your BS in\n15 minutes and it is now 70.\nWhat should you do next?';
+			level.questionBoxWidth = 550;
+			level.questionBoxHeight = 230;
+			level.slingX = 450;
+			level.slingY = 200;
+			level.answers = ['Eat/drink another 15 grams\ncandy, juice, or pop. Retest\nin 15 minutes. Once above\n80, eat/drink 15 grams of\ncracker or milk.',
+							 'Eat or drink\n15 grams of\ncrackers or milk.',
+							 "Go back to sleep,\nyou’ll be fine\nuntil morning."];
+			level.goalsImage = ['icons64/9a.png', 'icons64/9b.png', 'icons64/No.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [260, 180, 190];
+			level.goalsHeight = [90, 75, 66];
+			level.goalsX = [145, 445, 670];
+			level.goalsY = [635, 665, 635];
+			level.correct = 0;
+			level.helperClue = "Don’t go to sleep or give the\nstarchy snack until BS\nis above 80.";
+			/*level.clueWidth = 260;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'Treat any BS less than 80 with 15 grams of fast\nacting carb and retest in 15 minutes. Repeat this\nuntil BS is above 80.  Since you are sleeping and\nnot eating until morning, you will need the extra\n15 grams of starchy carbs.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 240;
+			
+			level.numBlocks = 5;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64, 64, 64, 64];
+			level.blocksHeight = [64, 64, 64, 64, 64];
+			level.blocksX = [150, 450, 690, 300, 570];
+			level.blocksY = [490, 490, 490, 390, 390];
+		} // end nightMed
+		
+		//---------------Difficult Levels---------------------\\
+		// afterBasketballHard, riddingBikeHard, beforeSoccerHard
+		function afterBasketballHard() {
+			level.bgImage = 'bg/BG0002.png';
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0010.png';
+			level.scenarioImage = 'scenarios/scenarios0010.png';
+			level.questionDetails = 'Level 10\nYou just finished playing basketball\nand your blood sugar is 300. It is 1 hour\nbefore dinner will be ready. What should you do?';
+			level.questionBoxWidth = 470;
+			level.questionBoxHeight = 180;
+			level.answers = ['Take insulin to\nbring your BS\ndown.',
+							 'Call the doctor\nat Riley\nimmediately.',
+							 'Drink water but don’t\ngive insulin.\nRecheck your BS\nbefore dinner.'];
+			level.goalsImage = ['icons64/Insulin.png', 'icons64/Phonecallriley.png', 'icons64/water.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [180, 180, 210];
+			level.goalsHeight = [66, 66, 75];
+			level.goalsX = [660, 660, 670];
+			level.goalsY = [100, 210, 330];
+			level.correct = 2;
+			level.helperClue = '300 is just a number\nand dinner is coming up.';
+			/*level.clueWidth = 220;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'Adrenaline from exercise may cause a quick “false”\nhigh. Do not treat immediately. Drinking water may\nhelp bring down your blood sugar some – you do not\nhave to, but it will not hurt.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 475;
+			level.postBoxHeight = 220;
+			level.postBoxMarginTop = 128;
+			
+			level.numFans = 1;
+			level.fansOffImage = ['Fan/fan1.png'];
+			level.fansOnImage = ['Fan/fanEffects6.png'];
+			level.fansWidth = [125];
+			level.fansHeight = [125];
+			level.fansX = [475];
+			level.fansY = [63];
+			level.fansStrength = [40];
+			level.fansDirection = [180];
+			level.fansEffectXOffset = [0];
+			level.fansEffectYOffset = [300];
+			level.fansEffectWidth = [125];
+			level.fansEffectHeight = [600];
+			level.fansEffectMaxDistance = [600];
+			level.fansEffectFramePeriod = [28];
+			level.fansOffFrames = [1];
+			level.fansOffImagePre = ['Fan/fan'];
+			level.fansOffImagePost = ['.png'];
+			level.fansOnFrames = [4];
+			level.fansOnImagePre = ['Fan/fan'];
+			level.fansOnImagePost = ['.png'];
+			level.fansAngle = [180];
+		} // end afterBasketballHard
+		
+		function riddingBikeHard() {
+			level.bgImage = 'bg/BG0003.png';
+			level.questionBoxWidth = 470;
+			level.questionBoxHeight = 180;
+			level.scenarioImage = 'scenarios/scenarios0011.png';
+			level.slingY = 200;
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0002.png';
+			level.questionDetails = 'Level 11\nYou are outside riding your bike.\nYou feel low and test your blood sugar. It is 75 so\nyou drink juice, retest and it is now 68. Now what?';
+			level.answers = ['Retreat with 15 grams of\njuice and retest in 15\nminutes. Rest while\nwaiting the 15 minutes.',
+							 "Don’t worry about\nit and go back to\nriding your bike.",
+							 'Sit down and\nwait until you\nfeel better.'];
+			level.goalsImage = ['icons64/11a.png', 'icons64/No.png', 'icons64/No.png'];
+			level.goalsColor = ['#001D74', '#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7, 0.7];
+			level.goalsWidth = [240, 195, 160];
+			level.goalsHeight = [75, 66, 66];
+			level.goalsX = [725, 430, 180];
+			level.goalsY = [380, 480, 580];
+			level.correct = 0;
+			level.helperClue = 'Exercise may drop your BS.';
+			/*level.clueWidth = 220;
+			level.clueHeight = 60;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'Treat your BS less than 80 like always (15 grams\nfast acting, wait 15 minutes). Remember to always\nrest while waiting for your BS to rise above 80. If\nyou keep exercising, your BS will keep wanting to\ndrop.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 460;
+			level.postBoxHeight = 240;
+			
+			level.numBlocks = 8;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64, 64, 64, 64, 64, 64, 64];
+			level.blocksHeight = [64, 64, 64, 64, 64, 64, 64, 64];
+			level.blocksX = [140, 550, 614, 678, 742, 806, 870, 934];
+			level.blocksY = [325, 250, 250, 250, 250, 250, 250, 250];
+			
+			level.numFans = 1;
+			level.fansOffImage = ['Fan/fan1.png'];
+			level.fansOnImage = ['Fan/fanEffects6.png'];
+			level.fansWidth = [125];
+			level.fansHeight = [125];
+			level.fansX = [475];
+			level.fansY = [648];
+			level.fansStrength = [10];
+			level.fansDirection = [0];
+			level.fansEffectXOffset = [0];
+			level.fansEffectYOffset = [-300];
+			level.fansEffectWidth = [125];
+			level.fansEffectHeight = [600];
+			level.fansEffectMaxDistance = [600];
+			level.fansEffectFramePeriod = [28];
+			level.fansOffFrames = [1];
+			level.fansOffImagePre = ['Fan/fan'];
+			level.fansOffImagePost = ['.png'];
+			level.fansOnFrames = [4];
+			level.fansOnImagePre = ['Fan/fan'];
+			level.fansOnImagePost = ['.png'];
+		} // end riddingBikeHard
+		
+		function beforeSoccerHard() {
+			level.bgImage = 'bg/BG0002.png';
+			level.ballImage = 'GlucoseMonitor/GlucoseMonitor0012.png';
+			level.scenarioImage = 'scenarios/scenarios0012.png';
+			level.slingX = 550;
+			level.slingY = 650;
+			level.questionDetails = 'Level 12\nYou are waiting to go to soccer practice\nand your BS is 400. It was 300 at your last\nBS check at lunch. What should you do?';
+			level.questionBoxWidth = 470;
+			level.questionBoxHeight = 180;
+			level.goalCount = 2
+			level.answers = ['Check your ketones. If your\nketones are moderate or large,\nget help from an adult who knows\nyour health plan. You cannot go\nto practice right now.',
+							 'Go to practice\nand run a few\nlaps to bring\nyour BS down.'];
+			level.goalsImage = ['icons64/GlucoseMonitor.png', 'icons64/No.png'];
+			level.goalsColor = ['#001D74', '#001D74'];
+			level.goalFontColor = '#FFFFFF';
+			level.goalsAlpha = [0.7, 0.7];
+			level.goalsWidth = [290, 180];
+			level.goalsHeight = [90, 75];
+			level.goalsX = [245, 765];
+			level.goalsY = [195, 180];
+			level.correct = 0;
+			level.helperClue = 'Back to back high BS means\nwe need check for ketones.';
+			/*level.clueWidth = 240;
+			level.clueHeight = 75;
+			level.clueColor = '#001D74';
+			level.clueAlpha = 0.7;
+			level.helperFontColor = '#FFFFFF';*/
+			level.explanation = 'Always check ketones if your BS is greater than 250\ntwice in a row. If moderate or large, you need to\nrest, drink fluids, and ask for assistance.';
+			level.postBoxColor = '#001D74';
+			level.postBoxAlpha = 0.7;
+			level.postBoxFontColor = '#FFFFFF';
+			level.postBoxWidth = 475;
+			level.postBoxHeight = 220;
+			
+			level.numBlocks = 10;
+			level.blocksImage = ['blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png', 'blocks/block.png'];
+			level.blocksWidth = [64, 64, 64, 64, 64, 64, 64, 64, 64, 64];
+			level.blocksHeight = [64, 64, 64, 64, 64, 64, 64, 64, 64, 64];
+			level.blocksX = [44, 108, 172, 236, 300, 364, 665, 729, 793, 857];
+			level.blocksY = [290, 290, 290, 290, 290, 290, 290, 290, 290, 290];
+			
+			level.numFans = 3;
+			level.fansOffImage = ['Fan/fan1.png', 'Fan/fan1.png', 'Fan/fan1.png'];
+			level.fansOnImage = ['Fan/fanEffects6.png', 'Fan/fanEffects6.png', 'Fan/fanEffects6.png'];
+			level.fansWidth = [125, 125, 125];
+			level.fansHeight = [125, 125, 125];
+			level.fansX = [550, 63, 885];
+			level.fansY = [113, 150, 150];
+			level.fansStrength = [10, 20, 20];
+			level.fansDirection = [180, 90, 270];
+			level.fansEffectXOffset = [0, 300, -300];
+			level.fansEffectYOffset = [-300, 0, 0];
+			level.fansEffectWidth = [125, 600, 600];
+			level.fansEffectHeight = [600, 125, 125];
+			level.fansEffectMaxDistance = [600, 600, 600];
+			level.fansEffectFramePeriod = [30, 29, 31];
+			level.fansOffFrames = [1, 1, 1];
+			level.fansOffImagePre = ['Fan/fan', 'Fan/fan', 'Fan/fan'];
+			level.fansOffImagePost = ['.png', '.png', '.png'];
+			level.fansOnFrames = [4, 4, 4];
+			level.fansOnImagePre = ['Fan/fan', 'Fan/fan', 'Fan/fan'];
+			level.fansOnImagePost = ['.png', '.png', '.png'];
+			level.fansAngle = [180, 90, 270];
+		} // end beforeSoccerHard
+		
+		function init() {
+			levelCounter = 0;
+			level = new Level();
+			level.init();
+			levels = [tutorialBasic, afterLunchEasy, beforeLunchEasy, beforeDinnerEasy, beforeBreakfastEasy, tutorialMed, beforeBreakfastMed, beforeDinnerMed, bedtimeMed, beforeBedMed, nightMed, tutorialHard, afterBasketballHard, riddingBikeHard, beforeSoccerHard];
+			//levels = [tutorialMed];
+			loadLevel();
+		} // end init
+		
+		function loadLevel() {
+		// Loads the next level.
+			if(levelCounter > 0){
+				level.stop();
+				level.defaults();
+				levels[levelCounter]();
+				level.resetGame();
+				level.game.start();
+			}
+		} // end loadLevel
+		
+		function update() {
+			level.update();
+			if(level.gameOver) {
+			// Increment the current level counter.
+				levelCounter ++;
+				if(levelCounter >= levels.length) {
+				// Wrap the game when the last level is completed.
+				// This is where any code to link back to the main site or to a post quiz could go.
+					//levelCounter = 0;
+				setTimeout("location.href='../../postQuiz.php';",500);
+				}
+				loadLevel();
+			} // end if
+		} // end update
+        
+    </script>
+    <!--<link rel="stylesheet" type="text/css" href="../main.css" />-->
+	<link rel="apple-touch-icon" href="icon.png">
+</head>
+<body onload = "init()"> 
+</body>
+</html>

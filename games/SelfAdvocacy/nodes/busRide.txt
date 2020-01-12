@@ -1,0 +1,15 @@
+{
+"situation":"Correct!  You want to make sure that you bring your\ndiabetes bracelet! You are now on your way to Conner\n Prarie. Make your way to the Continue Box to continue!",
+"imgSrc":"images/busRide.png",
+"options":[{"text":"Continue", "link":"nodes/picnicTables.txt", "width":"100", "height":"400", "x":"875", "y":"300", "answer":"correct"}],
+"helpText":"Run into the continue box\nto continue!",
+"inventory":"reset",
+"maxInvo":"1",
+"BSMode":"stable",
+"playerStart":{"x":"50", "y":"400"},
+"blockPositions":[{"x":"0", "y":"500"}, {"x":"50", "y":"500"}, {"x":"100", "y":"500"}, {"x":"150", "y":"500"}, 
+{"x":"325", "y":"425"}, {"x":"375", "y":"425"}, {"x":"425", "y":"425"}, 
+{"x":"75", "y":"350"}, {"x":"125", "y":"350"},
+{"x":"355", "y":"270"}, {"x":"405", "y":"270"}, 
+{"x":"700", "y":"350"},{"x":"750", "y":"350"},{"x":"800", "y":"350"},{"x":"850", "y":"350"},{"x":"900", "y":"350"}]
+}

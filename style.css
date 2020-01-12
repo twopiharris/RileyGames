@@ -1,0 +1,93 @@
+#all
+{
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.questionBorder {
+  border: 1px solid black;
+  padding: 1%;
+}
+
+.button-error {
+  background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+  background: rgb(223, 117, 20); /* this is an orange */
+}
+
+.button-border{
+  border: 1px solid black;
+}
+
+#question
+{
+  font-size: 225%;
+}
+
+#displayUsername
+{
+  text-align: right;
+}
+
+#addNurse label.error, #addPatient label.error
+{
+  color: red;
+}
+
+.button-xsmall {
+    font-size: 70%;
+}
+
+.button-small {
+    font-size: 85%;
+}
+
+.button-large {
+    font-size: 110%;
+}
+
+.button-xlarge {
+    font-size: 125%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/*Large radio buttons from http://www.csscheckbox.com/ */
+input[type=radio].css-checkbox
+{
+  display:none;
+}
+
+input[type=radio].css-checkbox + label.css-label
+{
+  padding-left:36px;
+  height:31px; 
+  display:inline-block;
+  line-height:31px;
+  background-repeat:no-repeat;
+  background-position: 0 0;
+  font-size:31px;
+  vertical-align:middle;
+  cursor:pointer;
+}
+
+input[type=radio].css-checkbox:checked + label.css-label
+{
+  background-position: 0 -31px;
+}
+
+label.css-label
+{
+  background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_25a8a84e2b7543f01ad2478ec10f4924.png);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

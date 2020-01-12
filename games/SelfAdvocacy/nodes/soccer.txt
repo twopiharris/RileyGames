@@ -1,0 +1,21 @@
+{
+"situation":"After a fun sleepover, my grandma picked me up for\nthe championship soccer game. I test my blood sugar\nbefore the game, and it is 85. I should..",
+"imgSrc":"images/soccerStart.png",
+"options":[{"text":"Tell my grandma\nor coach. I\nmight need a\nsnack before\n the activity.","link":"nodes/soccerCorrect.txt","width":"250", "height":"75", "x":"100", "y":"110"},
+{"text":"Get into the\ngame quickly\nand play hard.","link":"nodes/soccerWrong.txt","width":"250", "height":"75", "x":"100", "y":"325"}],
+"helpText":"Exercise can bring your blood\nsugar down.",
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"50", "y":"475"},
+"blockPositions":[{"x":"-25", "y":"600"}, {"x":"100", "y":"600"}, {"x":"973", "y":"600"},
+{"x":"25", "y":"550"}, {"x":"75", "y":"550"}, {"x":"773", "y":"550"},{"x":"823", "y":"550"}, {"x":"873", "y":"550"}, {"x":"923", "y":"550"},
+{"x":"900", "y":"475"}, {"x":"950", "y":"475"},
+{"x":"700", "y":"400"}, {"x":"750", "y":"400"},
+{"x":"550", "y":"325"}, {"x":"300", "y":"325"}, {"x":"350", "y":"325"},
+{"x":"450", "y":"250"},
+{"x":"25", "y":"190"}, {"x":"75", "y":"190"}, {"x":"125", "y":"190"}, {"x":"175", "y":"190"},
+{"x":"650", "y":"175"},
+{"x":"225", "y":"125"}, {"x":"275", "y":"125"}, {"x":"325", "y":"125"}, {"x":"375", "y":"125"},
+{"x":"25", "y":"375"}, {"x":"75", "y":"375"},{"x":"125", "y":"375"}, {"x":"175", "y":"375"}],
+"blockMovements":[{"bNum": "1", "speed": "10"}]
+}

@@ -1,0 +1,10 @@
+{
+"situation":"As I get ready for school, I have to be dressed and ready for my\nclass field trip to Conner Prairie. I need to make sure I bring... ",
+"imgSrc":"images/BG0004.png",
+"options":[{"text":"Go down stairs.","link":"nodes/downStairs.txt","width":"150", "height":"75", "x":"600", "y":"150"}],
+"inventory":"reset",
+"BSMode":"stable",
+"items":[{"imageSrc":"bracelet.png","width":"64","height":"64","x":"300","y":"200","z":"3","name":"bracelet"},{"imageSrc":"hat.png","width":"64","height":"64","x":"400","y":"200","z":"4","name":"hat"}],
+"playerStart":{"x":"20", "y":"100"},
+"blockPositions":[{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"200", "y":"200"}, {"x":"250", "y":"200"}, {"x":"300", "y":"200"}, {"x":"350", "y":"200"}, {"x":"400", "y":"200"}, {"x":"450", "y":"200"}, {"x":"500", "y":"200"}, {"x":"550", "y":"200"}, {"x":"600", "y":"200"}, {"x":"650", "y":"200"}]
+}

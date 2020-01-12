@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<!-- to add manifest add manifest="bubblePopManifest.appcache" to html element !-->
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale = 1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <title>BubblePop.html</title>
+    <script type = "text/javascript" src = "../simpleGame.js"></script>
+	<script type = "text/javascript" src = "bubblePopLib.js"></script>
+	<script type = "text/javascript" src = "../prepost.js"></script>
+	<script type = "text/javascript" src = "../Helper/helper.js"></script>
+	<style>
+		canvas {
+			-webkit-tap-highlight-color: transparent;
+		}
+	</style>
+    <script type="text/javascript">
+	
+		var level;
+		
+		function init() {
+			level = new Level();
+			level.init();
+		} // end init
+		
+		function update() {
+			level.update();
+			
+			if(level.gameOver) {
+				gameOver();
+				level.stop();
+			}
+		} // end update
+		
+		function gameOver() {
+			console.log("Game Over!");
+			// empty function called when the game ends
+			setTimeout("location.href='../../postQuiz.php';",500);
+		} // end gameOver
+		
+        // gameOver function is part of the level object and is at the bottom of bubblePopLib.js
+    </script>
+</head>
+<body onload = "init()"> 
+</body>
+</html>

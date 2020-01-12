@@ -1,0 +1,11 @@
+{
+"situation":"This is a spring test.",
+"imgSrc":"images/tutorial.png",
+"options":[{"text":"TEST","link":"nodes/tutorialLeft.txt","width":"500", "height":"75", "x":"650", "y":"150"}],
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"20", "y":"400"},
+"blockPositions":[{"x":"0", "y":"500"}, {"x":"50", "y":"500"}, {"x":"100", "y":"505"}, {"x":"600", "y":"500"}, {"x":"650", "y":"500"}],
+"blockMovements":[{"bNum":"2", "speed":"5"}],
+"springPositions":[{"x":"100", "y":"470"},{"x":"9999", "y":"9999"}]
+}

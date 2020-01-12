@@ -1,0 +1,9 @@
+{
+"situation":"My mom reminds me to grab my diabetes ID bracelet before\ngoing to school today just in case something happens.\nShe tells me that if I was to feint without it from having low blood sugar,\nmy group leader might thing I passed out from the heat and bring water instead of treating my low.",
+"imgSrc":"images/BG0006.png",
+"options":[{"text":"Go back upstairs.", "link":"nodes/beforeSchool.txt", "width":"100", "height":"75", "x":"600", "y":"400"}, {"text":"Tell her 'I got it.'\nand head for the bus.", "link":"nodes/fieldTrip.txt", "width":"100", "height":"100", "x":"600", "y":"100"}],
+"inventory":"reset",
+"BSMode":"hidden",
+"playerStart":{"x":"20", "y":"100"},
+"blockPositions":[{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"200", "y":"200"}, {"x":"250", "y":"200"}, {"x":"300", "y":"200"}, {"x":"350", "y":"200"}, {"x":"400", "y":"200"}, {"x":"450", "y":"200"}, {"x":"500", "y":"200"}, {"x":"550", "y":"200"}, {"x":"600", "y":"200"}, {"x":"650", "y":"200"}]
+}

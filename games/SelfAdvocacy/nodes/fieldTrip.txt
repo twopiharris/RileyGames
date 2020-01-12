@@ -1,0 +1,7 @@
+{
+"situation":"We have had a fun morning at Conner Prairie. Now it is time for lunch, which is great.\nI'm starving. Everyone grabs their sack lunch and sits down to start eating.\nI brought my favorite peanut butter and jelly. I...",
+"imgSrc":"images/BG0001.png",
+"options":[{"text":"Start eating. I know how many carbs are in my lunch and will take my insulin right after.", "link":"nodes/done.txt", "width":"100", "height":"75", "x":"50", "y":"150"},{"text":"Tell an adult that I need to test my blood sugar before I can eat, even if I have to wait a few more minutes. ", "link":"nodes/done.txt", "width":"100", "height":"75", "x":"650", "y":"150"}],
+"playerStart":{"x":"300", "y":"100"},
+"blockPositions":[{"x":"0", "y":"200"}, {"x":"50", "y":"200"}, {"x":"100", "y":"200"}, {"x":"150", "y":"200"}, {"x":"200", "y":"200"}, {"x":"250", "y":"200"}, {"x":"300", "y":"200"}, {"x":"350", "y":"200"}, {"x":"400", "y":"200"}, {"x":"450", "y":"200"}, {"x":"500", "y":"200"}, {"x":"550", "y":"200"}, {"x":"600", "y":"200"}, {"x":"650", "y":"200"}]
+}

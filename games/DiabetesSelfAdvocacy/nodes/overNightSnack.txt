@@ -1,0 +1,17 @@
+{
+"situation":"Overnight, my friends decide to get some snacks\nfrom the kitchen. I should..",
+"imgSrc":"images/kitchenDoorOpen.png",
+"options":[{"text":"Enjoy the\nsnacks\nand not\ntell anyone","link":"nodes/snackDecisionWrong.txt","width":"250", "height":"75", "x":"550", "y":"150", "answer":"incorrect"},
+{"text":"Enjoy snacks\nbut get help\ncounting carbs\nand giving\ninsulin.","link":"nodes/soccer.txt","width":"250", "height":"75", "x":"400", "y":"150", "answer":"correct"}],
+"helpText":"Be safe and stay healthy.\nDon't sneak snacks.",
+"inventory":"resetNone",
+"BSMode":"stable",
+"playerStart":{"x":"474", "y":"345"},
+"blockPositions":[{"x":"0", "y":"475"}, {"x":"50", "y":"475"}, {"x":"415", "y":"474"}, {"x":"505", "y":"474"}, {"x":"898", "y":"475"}, {"x":"948", "y":"475"},
+{"x":"450", "y":"400"},{"x":"500", "y":"400"},
+{"x":"0", "y":"400"}, {"x":"948", "y":"400"},
+{"x":"150", "y":"350"}, {"x":"200", "y":"350"}, {"x":"750", "y":"350"}, {"x":"800", "y":"350"},
+{"x":"250", "y":"300"}, {"x":"300", "y":"300"}, {"x":"650", "y":"300"}, {"x":"700", "y":"300"},
+{"x":"350", "y":"250"}, {"x":"400", "y":"250"}, {"x":"450", "y":"250"}, {"x":"500", "y":"250"}, {"x":"550", "y":"250"}, {"x":"600", "y":"250"}],
+"blockMovements":[{"bNum": "2", "speed": "7"}, {"bNum":"3", "speed":"-7"}]
+}

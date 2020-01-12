@@ -1,0 +1,16 @@
+{
+"situation":"Since I didn't check my blood sugar I was not able to treat my low.\nI start to get confused, so coach calls Mom to come pick up.\nBecause of this, I am going to be late for the team dinner.",
+"imgSrc":"images/busRide.png",
+"options":[{"text":"Continue to\ndinner", "link":"nodes/shakeShack.txt", "width":"100", "height":"75", "x":"650", "y":"275", "answer":"correct"}],
+"helpText":"Its ok if you miss the bus,\nyour safety and health is\nmost important!",
+"inventory":"resetNone",
+"maxInvo":"2",
+"BSMode":"decreasing",
+"barValues":{"max":"240", "min":"20"},
+"barSize":{"barWidth":"240", "barHeight":"32", "sliderWidth":"32", "sliderHeight":"32"},
+"playerStart":{"x":"50", "y":"100"},
+"blockPositions":[{"x":"0", "y":"175"}, {"x":"50", "y":"175"}, {"x":"100", "y":"175"}, {"x":"150", "y":"175"}, {"x":"200", "y":"175"},
+{"x":"700", "y":"175"}, {"x":"750", "y":"175"}, {"x":"800", "y":"175"}, {"x":"850", "y":"175"}, {"x":"900", "y":"175"}, {"x":"950", "y":"175"},
+{"x":"325", "y":"600"}],
+"springPositions":[{"x":"325", "y":"570"}]
+}

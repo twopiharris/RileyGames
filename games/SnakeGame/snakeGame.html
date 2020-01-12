@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale = 1.0, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type = "text/javascript" src = "./simpleGame.js"></script>
+<script type = "text/javascript" src = "./snakeGameLib.js"></script>
+<script type = "text/javascript" src = "../prepost.js"></script>
+<script type = "text/javascript" src = "../Helper/helper.js"></script>
+<script type = "text/javascript">
+	var game;
+	var level;
+	var gameWidth = 992;
+	var gameHeight = 704;
+	var updates = 0;
+	
+	function init() {
+		game = new Scene();
+		game.setSize(gameWidth, gameHeight);
+		level = new Level();
+		level.init();
+		game.start();
+	}
+	
+	function update() {
+		game.clear();
+		level.update();
+	}
+</script>
+<title>SnakeGame.html</title>
+</head>
+
+<body onload="init()">
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+"situation":"At the Shake Shack, I ordered a hamburger, fries, and chocolate shake.\nI check my blood sugar and count the carbs in my dinner with help from my\ncoach. I take my insulin before I eat. I start with my chocolate shake first, but\nIm starting to feel too full for my hamburger and fries. I..",
+"imgSrc":"images/shakeShack.png",
+"options":[{"text":"-need to make sure I\neat 75% of my carbs.\nI dont have to force\nmyself to eat everything,\njust a few more bites. ", "link":"nodes/shakeShackCorrect.txt", "width":"100", "height":"75", "x":"228", "y":"60", "answer":"correct"},
+{"text":"-dont need to finish\nmy meal. I already\ngot my insulin so\nit will be fine. ", "link":"nodes/shakeShackIncorrect.txt", "width":"100", "height":"75", "x":"683", "y":"50", "answer":"incorrect"}],
+"helpText":" You already received insulin,\nso carbs matter. ",
+"inventory":"resetNone",
+"maxInvo":"2",
+"BSMode":"none",
+"playerStart":{"x":"50", "y":"550"},
+"blockPositions":[{"x":"5", "y":"600"}, {"x":"55", "y":"600"}, {"x":"105", "y":"600"}, {"x":"155", "y":"600"}, {"x":"205", "y":"600"}, {"x":"255", "y":"600"}, {"x":"305", "y":"600"}, {"x":"355", "y":"600"}, {"x":"405", "y":"600"},
+{"x":"455", "y":"600"},
+{"x":"228", "y":"340"},
+{"x":"683", "y":"340"}],
+"springPositions":[{"x":"455", "y":"570"}, {"x":"228", "y":"310"}, {"x":"683", "y":"310"}]
+}

@@ -1,0 +1,10 @@
+{
+"situation":"Swipe your finger upward to jump.",
+"imgSrc":"images/tutorial.png",
+"options":[{"text":"\n\n\n\nRun into me to continue\nto the next level\n\n\n\n","link":"nodes/tutorialItem.txt","width":"150", "height":"75", "x":"800", "y":"250", "answer":"correct"}],
+"helpText":"Swipe your finger up",
+"inventory":"reset",
+"BSMode":"stable",
+"playerStart":{"x":"20", "y":"275"},
+"blockPositions":[{"x":"0", "y":"350"}, {"x":"50", "y":"350"}, {"x":"100", "y":"350"}, {"x":"250", "y":"350"}, {"x":"400", "y":"350"}, {"x":"450", "y":"350"}, {"x":"600", "y":"350"}, {"x":"650", "y":"350"}]
+}

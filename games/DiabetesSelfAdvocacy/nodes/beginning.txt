@@ -1,0 +1,17 @@
+{
+"situation":"You can tap and drag an item in your inventory to remove it!\nI am happy it is Friday!  I have some fun plans. As I get ready for school,\nI have to be dressed and ready for my class feild trip to Conner Prarie.\nI need to make sure I bring my...",
+"imgSrc":"images/bedroomMorning.png",
+"options":[{"text":"Continue", "link":"nodes/braceletIncorrect.txt", "width":"100", "height":"75", "x":"775", "y":"350", "answer":"incorrect"},
+{"text":"Continue", "link":"nodes/busRide.txt", "width":"100", "height":"75", "x":"775", "y":"350", "answer":"correct"}],
+"helpText":"Without the bracelet, people\nmay not know how to help\nin an emergency.",
+"inventory":"reset",
+"maxInvo":"2",
+"BSMode":"stable",
+"items":[{"imageSrc":"bracelet.png","width":"64","height":"64","x":"675","y":"200","z":"3","name":"item1"},
+{"imageSrc":"hat.png","width":"64","height":"64","x":"125","y":"200","z":"4","name":"hat"}],
+"playerStart":{"x":"50", "y":"300"},
+"blockPositions":[{"x":"0", "y":"400"}, {"x":"50", "y":"400"}, {"x":"100", "y":"400"}, {"x":"150", "y":"400"}, {"x":"200", "y":"400"}, {"x":"250", "y":"400"}, {"x":"300", "y":"400"}, {"x":"500", "y":"400"}, {"x":"550", "y":"400"}, {"x":"600", "y":"400"}, {"x":"650", "y":"400"}, {"x":"700", "y":"400"},
+{"x":"350", "y":"325"}, {"x":"400", "y":"325"}, {"x":"450", "y":"325"}, 
+{"x":"175", "y":"250"}, {"x":"125", "y":"250"}, {"x":"75", "y":"250"}, 
+{"x":"625", "y":"250"}, {"x":"675", "y":"250"}, {"x":"725", "y":"250"}]
+}

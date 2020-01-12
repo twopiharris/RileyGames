@@ -1,0 +1,46 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>frogger</title>
+    <script type = "text/javascript" src = "simpleGame.js"></script>
+	<script type = "text/javascript" src = "frog.js"></script>
+        <script type = "text/javascript" src = "road.js"></script>
+        <script type = "text/javascript" src = "level.js"></script>
+        <script type = "text/javascript" src = "car.js"></script>
+    <script type="text/javascript">
+		var game;
+                var frog;
+                var joy;
+                var frog;
+                var road;
+                var level;
+                var virtKeys = true;
+                
+		function init() {
+                    //level = new Level(game);
+                    game = new Scene();
+                    //initialize virtual joystick
+                    joy = new Joy();
+                    
+                    frog = new Frog(game, "frog.png", 50, 50, 400, 525);
+                    road = new Road(game, "road.png", 1200, 300, 400, 350);
+                    
+                    level = new Level(game, frog);
+                    level.init();
+                    
+                    game.start();
+		} // end init
+		
+		function update() {
+                    game.clear();
+                    spriteList.update();
+                    level.update();
+		} // end update
+        
+    </script>
+</head>
+<body onload = "init()"> 
+</body>
+</html>

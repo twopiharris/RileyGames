@@ -1,0 +1,18 @@
+{
+"situation":"After testing my blood sugar, I find\nthat it's at 60 and needs to be corrected.\n Quickly drink some juice!",
+"imgSrc":"images/pizzaBG.png",
+"options":[{"text":"Continue","link":"nodes/friendsForgot3pt2.txt","width":"250", "height":"75", "x":"855", "y":"200"},
+{"text":"Continue","link":"nodes/friendsForgot3pt3.txt","width":"250", "height":"75", "x":"855", "y":"200"}],
+"items":[{"imageSrc":"lowTreatments.png","width":"64","height":"64","x":"915","y":"435","z":"3","name":"item1"}],
+"helpText":"To correct your low blood sugar\nyou should drink some juice.",
+"inventory":"reset",
+"BSMode":"decreasing",
+"barValues":{"max":"240", "min":"20"},
+"barSize":{"barWidth":"240", "barHeight":"32", "sliderWidth":"32", "sliderHeight":"32"},
+"playerStart":{"x":"474", "y":"407"},
+"blockPositions":[{"x":"0", "y":"475"}, {"x":"50", "y":"475"}, {"x":"350", "y":"474"}, {"x":"450", "y":"475"},{"x":"500", "y":"475"}, {"x":"798", "y":"475"}, {"x":"898", "y":"475"}, {"x":"948", "y":"475"},
+{"x":"0", "y":"400"},
+{"x":"210", "y":"325"}, {"x":"260", "y":"325"},
+{"x":"475", "y":"250"}, {"x":"525", "y":"250"}, {"x":"575", "y":"250"}, {"x":"625", "y":"250"}, {"x":"675", "y":"250"}, {"x":"725", "y":"250"}, {"x":"775", "y":"250"}, {"x":"825", "y":"250"}, {"x":"875", "y":"250"}, {"x":"925", "y":"250"}],
+"blockMovements":[{"bNum": "2", "speed": "7"}, {"bNum":"5", "speed":"7"}]
+}

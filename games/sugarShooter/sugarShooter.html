@@ -1,0 +1,62 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" name="apple-mobile-web-app-capable" content="yes">
+    <title>Diabetes Shooter</title>
+    <script type = "text/javascript" src = "../simpleGame.js"></script>
+    <script type = "text/javascript" src = "shooter.js"></script>
+    <script type = "text/javascript" src = "sugar.js"></script>
+    <script type = "text/javascript" src = "bullet.js"></script>
+    <script type = "text/javascript" src = "level.js"></script>
+    <script type = "text/javascript" src = "BG.js"></script>
+    <script type="text/javascript">
+
+    var scene;
+    var shooter;
+    //var enemies = new Array();
+    //var numEnemies = 0;
+    
+    var background;
+    var joy;
+    var accel;
+    
+    var frameCount = 0;
+    var last = 0;
+
+    function init() {
+        game = new Scene();
+        accel = new Accel();
+        shooter = new Shooter(game, "GlucoseMonitor0000.png" , accel, 100, 100, 464, 600, 1);
+        level = new Level(game);
+        
+        game.setSize(948, 711);
+        
+        //background = new BG(game, 'BG0001.png', 948, 711, 474, 355, 0);
+        
+        joy = new Joy();
+        
+        //enemies[numEnemies] = new Sugar(game, shooter, "Chocolate.png", accel, 50, 50, Math.floor((Math.random() * 900) + 1), 0, 0);
+        
+        game.start();
+    } // end init
+    
+    function update() {
+        game.clear();
+        spriteList.update();
+        
+        if((last + 40) < frameCount)
+        {
+            last = frameCount;
+            level.addEnemy(new Sugar(game, shooter, "Chocolate.png", accel, 50, 50, Math.floor((Math.random() * 900) + 1), 0, 0));
+            //numEnemies++;
+        }
+        
+        frameCount++;
+    } // end update
+    </script>
+	<!-- <link rel="apple-touch-icon" href="icon.png">-->
+</head>
+<body onload="init()"> 
+</body>
+</html>

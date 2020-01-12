@@ -1,0 +1,8 @@
+{
+"situation":"You finished the game!",
+"imgSrc":"images/BG0006.png",
+"soundSrc":"ding.mp3",
+"options":[],
+"playerStart":{"x":"-20", "y":"800"},
+"blockPositions":[]
+}

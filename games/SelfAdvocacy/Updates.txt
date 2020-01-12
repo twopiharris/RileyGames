@@ -1,0 +1,11 @@
+Added levels to the game.
+
+Fixed an issue with the spring where if multiple springs loaded, some would continuously run the graphics.
+
+Added character choice
+
+Updated Images
+
+Game has been complete minus anything regarding small touch ups and riley server implementation!!!!!
+
+WOO!

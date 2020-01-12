@@ -1,0 +1,14 @@
+{
+"situation":"If I dont check a blood sugar when Im feeling low, I wont know if I should treat\nor not. If I dont treat a low, I can get myself into trouble. I can treat a mild low,\nbut if it gets worse, I will not be able to help myself.  I can become confused\nor pass out.  I will need a teacher, friend, nurse, or parent to take over.",
+"imgSrc":"images/busRide.png",
+"options":[{"text":"Good Job!\nConinue", "link":"nodes/shakeShack.txt", "width":"100", "height":"75", "x":"650", "y":"275", "answer":"correct"}],
+"helpText":"Its ok if you miss the bus,\nyour safety and health is\nmost important!",
+"inventory":"resetNone",
+"maxInvo":"2",
+"BSMode":"none",
+"playerStart":{"x":"50", "y":"100"},
+"blockPositions":[{"x":"0", "y":"175"}, {"x":"50", "y":"175"}, {"x":"100", "y":"175"}, {"x":"150", "y":"175"}, {"x":"200", "y":"175"},
+{"x":"700", "y":"175"}, {"x":"750", "y":"175"}, {"x":"800", "y":"175"}, {"x":"850", "y":"175"}, {"x":"900", "y":"175"}, {"x":"950", "y":"175"},
+{"x":"325", "y":"600"}],
+"springPositions":[{"x":"325", "y":"570"}]
+}
